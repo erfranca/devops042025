@@ -1,0 +1,9 @@
+---
+- name: facts
+  hosts: web
+  become: yes
+  gather_facts: true #habilitando o facts
+  tasks:
+    - name: teste
+      debug: # chamando um módulo para exibir na tela
+        var: ansible_facts
