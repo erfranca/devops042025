@@ -30,11 +30,11 @@
         state: directory
         owner: "{{app_user}}"
         mode: "0775"
-          #- name: 'Download e Extração do arquivo de aplicação'
-          #unarchive:
-          #src: https://github.com/rogerramossilva/devops/raw/master/express.zip
-          #dest: /srv/www
-          #remote_src: yes
+    - name: 'Download e Extração do arquivo de aplicação'
+      unarchive:
+        src: https://github.com/rogerramossilva/devops/raw/master/express.zip
+        dest: /srv/www
+        remote_src: yes
     - name: 'Substitui IP de Conexão com o Banco de Dados'
       replace:
         path: /srv/www/express/backup.php
