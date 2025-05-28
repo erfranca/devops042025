@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        state('Executar playbook Ansible') {
+        stage('Executar playbook Ansible') {
 	    steps {
 	        ansiblePlaybook(
 		    inventory: 'ansible/hosts',
