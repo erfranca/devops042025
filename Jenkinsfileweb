@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         state('Executar playbook Ansible') {
 	    steps {
